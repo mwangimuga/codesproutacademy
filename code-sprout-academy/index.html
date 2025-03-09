@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSprout Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".image");
+            const options = {
+                threshold: 0.3
+            };
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
+    
+            images.forEach(image => {
+                observer.observe(image);
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+        const pricingTable = document.querySelector(".pricing-table");
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    pricingTable.classList.add("visible");
+                    observer.unobserve(pricingTable);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        observer.observe(pricingTable);
+    });
+    </script>
+    
+</head>
+<body>
+    <div class="header fade-in">
+        <h1>Welcome to CodeSprout Academy</h1>
+        <p>Fun & Interactive Tech Classes for Kids</p>
+    </div>
+
+    <div class="container fade-in">
+        <img src="your-new-image1.jpg" alt="Kids learning technology" class="image">
+        <h2>About Us</h2>
+        <p>CodeSprout Academy offers engaging online tech courses for children. Our mission is to introduce young minds to coding, web development, and problem-solving in a fun and interactive way.</p>
+
+        <img src="your-new-image2.jpg" alt="Coding classroom" class="image">
+
+
+        <h2>Curriculum Outline</h2>
+<p class="curriculum-intro">A structured 12-week program designed to introduce young learners to coding, web development, and cybersecurity.</p>
+
+<div class="curriculum-container fade-in">
+    <!-- Month 1: Beginner Level -->
+    <div class="curriculum-month">
+        <h3>🌱 Month 1: Introduction to Tech & Coding Basics</h3>
+        <div class="curriculum-item">
+            <h4>Week 1: Introduction to Computers & the Internet</h4>
+            <ul>
+                <li>Understanding hardware & software</li>
+                <li>Basic internet safety</li>
+            </ul>
+        </div>
+        <div class="curriculum-item">
+            <h4>Week 2: Introduction to Coding (Scratch or Blockly)</h4>
+            <ul>
+                <li>Drag-and-drop programming concepts</li>
+                <li>Creating simple animations</li>
+            </ul>
+        </div>
+        <div class="curriculum-item">
+            <h4>Week 3: Problem-Solving with Coding</h4>
+            <ul>
+                <li>Understanding loops and conditions</li>
+                <li>Hands-on practice: Building a small interactive game</li>
+            </ul>
+        </div>
+        <div class="curriculum-item">
+            <h4>Week 4: Fun with Algorithms</h4>
+            <ul>
+                <li>Step-by-step thinking</li>
+                <li>Activity: Writing instructions for a robot</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Month 2: Intermediate Level -->
+    <div class="curriculum-month">
+        <h3>🚀 Month 2: Web Development & Robotics Basics</h3>
+        <div class="curriculum-item">
+            <h4>Week 5: Introduction to HTML & CSS</h4>
+            <ul>
+                <li>Basics of web design</li>
+                <li>Creating a simple webpage</li>
+            </ul>
+        </div>
+        <div class="curriculum-item">
+            <h4>Week 6: Interactive Websites with JavaScript</h4>
+            <ul>
+                <li>Basics of JavaScript</li>
+                <li>Making buttons & interactive elements</li>
+            </ul>
+        </div>
+        <div class="curriculum-item">
+            <h4>Week 7: Introduction to Robotics (Optional)</h4>
+            <ul>
+                <li>Understanding sensors & motors</li>
+                <li>Virtual simulation tools for robotics</li>
+            </ul>
+        </div>
+        <div class="curriculum-item">
+            <h4>Week 8: Building a Mini Web Project</h4>
+            <ul>
+                <li>Creating a personal portfolio page</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Month 3: Advanced Level -->
+    <div class="curriculum-month">
+        <h3>🎓 Month 3: Problem-Solving & Cybersecurity Basics</h3>
+        <div class="curriculum-item">
+            <h4>Week 9: Introduction to Python</h4>
+            <ul>
+                <li>Variables, loops, and functions</li>
+                <li>Writing simple Python programs</li>
+            </ul>
+        </div>
+        <div class="curriculum-item">
+            <h4>Week 10: Fun with AI & Machine Learning</h4>
+            <ul>
+                <li>Understanding AI in everyday life</li>
+                <li>Hands-on: Training a basic AI model with Teachable Machine</li>
+            </ul>
+        </div>
+        <div class="curriculum-item">
+            <h4>Week 11: Cybersecurity & Online Safety</h4>
+            <ul>
+                <li>Protecting personal information online</li>
+                <li>Basic encryption techniques</li>
+            </ul>
+        </div>
+        <div class="curriculum-item">
+            <h4>Week 12: Final Project & Certification</h4>
+            <ul>
+                <li>Students create a final project based on what they learned</li>
+                <li>Graduation & certificates awarded</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+        <img src="your-new-image3.jpg" alt="Online learning session" class="image fade-in">
+        <h2>Pricing</h2>
+        <table class="pricing-table fade-in">
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Price</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Single Class</td>
+                    <td>Ksh. 1500</td>
+                    <td>One-time session</td>
+                </tr>
+                <tr>
+                    <td>Monthly Plan</td>
+                    <td>Ksh. 5000</td>
+                    <td>4 Sessions per month</td>
+                </tr>
+                <tr>
+                    <td>Sibling Discount</td>
+                    <td>10% Off</td>
+                    <td>For additional siblings</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Enroll Now</h2>
+        <a href="contact.html" class="cta-button fade-in">Book Classes</a>
+    </div>
+
+    <div class="footer fade-in">
+        <p>📍 Nairobi, Kenya | 📞 +254 725 406 995 | ✉ info@codesprout.ac.ke</p>
+        <p>&copy; 2025 <a href="index.html" >CodeSprout Academy</a></p>
+        <p><a href="https://api.whatsapp.com/send/?phone=254725406995&text&type=phone_number&app_absent=0" >WhatsApp</p>
+
+    </div>
+</body>
+</html>
