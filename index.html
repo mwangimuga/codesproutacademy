@@ -25,6 +25,16 @@
                 observer.observe(image);
             });
         });
+        document.addEventListener("DOMContentLoaded", function () {
+    const ctaButton = document.querySelector(".cta-button");
+
+    if (ctaButton) {
+        setTimeout(() => {
+            ctaButton.classList.add("visible"); // Adds the class to make it visible
+        }, 500); // Delays fade-in for a smooth effect
+    }
+});
+
         document.addEventListener("DOMContentLoaded", function() {
         const pricingTable = document.querySelector(".pricing-table");
 
@@ -51,7 +61,7 @@
     <div class="container fade-in">
         <img src="your-new-image1.jpg" alt="Kids learning technology" class="image">
         <h2>About Us</h2>
-        <p>CodeSprout Academy offers engaging online tech courses for children. Our mission is to introduce young minds to coding, web development, and problem-solving in a fun and interactive way.</p>
+        <p>Offering engaging online tech courses for kids and teens. <span class="highlight">Our mission is to introduce young minds to computer programming, web-development, and cyber-security in a fun and interactive way.</span></p>
 
         <img src="your-new-image2.jpg" alt="Coding classroom" class="image">
 
@@ -71,7 +81,7 @@
             </ul>
         </div>
         <div class="curriculum-item">
-            <h4>Week 2: Introduction to Coding (Scratch or Blockly)</h4>
+            <h4>Week 2: Introduction to Coding (Scratch)</h4>
             <ul>
                 <li>Drag-and-drop programming concepts</li>
                 <li>Creating simple animations</li>
@@ -111,10 +121,10 @@
             </ul>
         </div>
         <div class="curriculum-item">
-            <h4>Week 7: Introduction to Robotics (Optional)</h4>
+            <h4>Week 7: Cybersecurity & Online Safety</h4>
             <ul>
-                <li>Understanding sensors & motors</li>
-                <li>Virtual simulation tools for robotics</li>
+                <li>Protecting personal information online</li>
+                <li>Basic encryption techniques</li>
             </ul>
         </div>
         <div class="curriculum-item">
@@ -143,10 +153,11 @@
             </ul>
         </div>
         <div class="curriculum-item">
-            <h4>Week 11: Cybersecurity & Online Safety</h4>
+            <h4>Week 11: Introduction to Robotics</h4>
             <ul>
-                <li>Protecting personal information online</li>
-                <li>Basic encryption techniques</li>
+                <li>Understanding sensors & motors</li>
+                <li>Virtual simulation tools for robotics</li>
+                
             </ul>
         </div>
         <div class="curriculum-item">

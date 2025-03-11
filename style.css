@@ -50,6 +50,10 @@ h2 {
     color: #1B5E20;
     font-weight: bold;
 }
+.highlight {
+    color: #6a205a; 
+    font-weight: bold;
+}
 
 /* Footer */
 .footer {
@@ -128,7 +132,7 @@ h2 {
 }
 
 .curriculum-item h4 {
-    color: #1B5E20;
+    color: #6a205a;
     font-size: 1.3em;
     margin-bottom: 5px;
 }
@@ -206,7 +210,11 @@ h2 {
     font-weight: bold;
     font-size: 1.8em;
 }
-
+.contact-container label{
+    color: #6a205a;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
 .contact-container form {
     display: flex;
     flex-direction: column;
@@ -250,6 +258,43 @@ a:hover {
     color: #206A5D;  /* Set a custom hover color */
     text-decoration: underline; /* Optional: Add an underline on hover */
 }
+
+.cta-button {
+    display: inline-block;
+    background-color: #1B5E20; /* Rich green color */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, opacity 1s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in effect */
+.cta-button.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover effect */
+.cta-button:hover {
+    background-color: #206A5D; /* Darker green */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
 
 
 /* Mobile Responsiveness */
